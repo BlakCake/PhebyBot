@@ -15,7 +15,7 @@ client.on('message', message => {
 	if(!message.content.startsWith(`${PREFIX}`)) return;
 
 	const args = message.content.slice(PREFIX.length).trim().split(' ');
-	const command = args.shift().toLowerCase();
+	// const command = args.shift().toLowerCase();
 
 	if (message.content === `${PREFIX}hello`) {
 		message.channel.send('Hello World!');
