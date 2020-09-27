@@ -11,6 +11,11 @@ client.once('ready', () => {
 client.on('message', message => {
 	// No reason to respond to other bots or myself
 	if(message.author.bot) return;
+	// Ignore all messages not starting with our prefix
+	if(!message.content.startsWith(`${PREFIX}`)) return;
+
+	const args = message.content.slice(PREFIX.length).trim().split(' ');
+	const command = args.shift().toLowerCase();
 
 	if (message.content === `${PREFIX}hello`) {
 		message.channel.send('Hello World!');
@@ -22,7 +27,6 @@ client.on('message', message => {
 	}
 
 	if (message.content.startsWith(`${PREFIX}time`)) {
-		const args = message.content.slice(PREFIX.length).trim().split(' ');
 		const msg = utils.timeConversion(args);
 		message.channel.send(msg);
 	}
