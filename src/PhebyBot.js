@@ -8,13 +8,12 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	// No reason to respond to other bots or myself
+	if(message.author.bot) return;
+
 	if (message.content === `${PREFIX}hello`) {
 		message.channel.send('Hello World!');
 	}
-});
-
-client.on('message', message => {
-	if(message.author.bot) return;
 
 	if (message.content === `${PREFIX}pheby`) {
 		message.channel.send('Hewwoo! My name is Pheby! Happy to help <3 \n Here\'s more info about me:');
