@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
+const _ = require('lodash');
 const client = new Discord.Client();
 const { PREFIX, API_KEY } = require('./config');
 const utils = require('./utils');
 const templates = require('./templates/templates.js');
+const ThankQuotes = require('./templates/ThankYouQuotes.js');
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -29,6 +31,11 @@ client.on('message', message => {
 	if (message.content.startsWith(`${PREFIX}time`)) {
 		const msg = utils.timeConversion(args);
 		message.channel.send(msg);
+	}
+
+	if (message.content === `${PREFIX}thanks`) {
+		console.log(ThankQuotes.RanThanks);
+		message.channel.send(_.sample(ThankQuotes.RanThanks));
 	}
 });
 
