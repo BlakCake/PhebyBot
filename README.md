@@ -10,6 +10,7 @@ Hi, welcome to Phebybot. I hope I can be useful for your discord server!
 | -pheby        | See my intro!                           | -pheby                      |
 | -time         | Time conversion between countries       | -time {country} {HH:MM}     |
 | -time         | Show time in country                    | -time {country}             |
+| -thanks       | Say Thank you to Pheby!                 | -thanks                     |
 
 ## Installation
 ```
