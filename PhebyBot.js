@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { PREFIX, API_KEY } = require('./config');
-const { INTRO } = require('./templates/templates.js');
+const utils = require('./utils');
+const templates = require('./templates/templates.js');
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -16,8 +17,14 @@ client.on('message', message => {
 	}
 
 	if (message.content === `${PREFIX}pheby`) {
-		message.channel.send('Hewwoo! My name is Pheby! Happy to help <3 \n Here\'s more info about me:');
-		message.channel.send(INTRO);
+		message.channel.send('Hewwoo! My name is Pheby! Happy to help <3 \nHere\'s more info about me:');
+		message.channel.send(templates.INTRO);
+	}
+
+	if (message.content.startsWith(`${PREFIX}time`)) {
+		const args = message.content.slice(PREFIX.length).trim().split(' ');
+		const msg = utils.timeConversion(args);
+		message.channel.send(msg);
 	}
 });
 
