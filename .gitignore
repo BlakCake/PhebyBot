@@ -1,0 +1,3 @@
+node_modules/*
+*.ahk
+package-lock.json

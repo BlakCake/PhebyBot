@@ -1,0 +1,26 @@
+{
+  "name": "phebybot",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlakCake/PhebyBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlakCake/PhebyBot/issues"
+  },
+  "homepage": "https://github.com/BlakCake/PhebyBot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "eslint": "^7.10.0"
+  }
+}
