@@ -1,2 +1,2 @@
 # PhebyBot
-Cute Discord bot written in AHK
+Cute Discord bot
