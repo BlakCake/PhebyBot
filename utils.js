@@ -47,7 +47,8 @@ function timeConversion(args) {
 			germany = moment.tz(time, 'HHmm', 'Europe/Berlin');
 			london = germany.clone().tz('Europe/London');
 			panama = germany.clone().tz('America/Panama');
-		} else {
+		}
+		else {
 			return '';
 		}
 		let message = '';
