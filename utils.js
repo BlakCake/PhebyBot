@@ -28,7 +28,7 @@ function timeConversion(args) {
 	if (args.length === 3) {
 		console.log(args);
 		const time = args[2];
-		const country = args[1];
+		const country = args[1].toLowerCase();
 		let panama = '';
 		let london = '';
 		let germany = '';
