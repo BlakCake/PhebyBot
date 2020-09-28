@@ -1,7 +1,7 @@
 # PhebyBot
 ![Pheby Hi](./docs/pheby_hi.png)
 
-Hi, welcome to Phebybot. I hope I can be useful for your discord server!
+Hi! My name is Pheby, nice to meet you 💗 I hope I can be useful for your Discord server!
 
 ## Commands
 
@@ -28,5 +28,6 @@ node PhebyBot.js
 ```
 
 ## Todo
-- Movie suggestor
+- Movie suggestion
+- Game suggestion
 - Poll creator
