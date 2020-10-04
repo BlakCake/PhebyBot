@@ -1,1 +1,1 @@
-exports.RanThanks = ['This a test, cowboy', 'Another test', ' I wanna be a cowboy'];
+exports.RanThanks = ['No worries!', 'That makes me really happy 💗', 'If you are happy, I\'m happy too!', 'I\'m just glad I\'m being useful 💗', 'I deserve lots of donuts 🍩', 'Love you!', 'You should try my other commands sometime', 'Aww, no worries. Maybe we should play VRChat someday', 'Awww! You should probably thank my creators Blak#0001 and Meep#0101 too', 'Donuts are the best way to say thanks 🍩', 'Yay', 'Yaay', 'Yaaay', 'Tell Meep#0101 that he\'s an awesome coder'];
