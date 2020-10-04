@@ -63,7 +63,6 @@ client.on('message', message => {
 	}
 
 	if (message.content.startsWith(`${PREFIX}flight`)) {
-		// -flight icon 42
 		const iconSpeed = 193;
 		const requestedTime = parseInt(args[2]) / 60;
 		const randAirport = _.sample(data_arr);
@@ -93,6 +92,7 @@ client.on('message', message => {
 			utils.feetToMeters(randAirport.longest_runway_width),
 			utils.feetToMeters(randAirport.altitude),
 			randAirport.tower_frequency,
+			destAirport.flight_time.toFixed(1),
 		);
 		const arrMsg = templates.FlightPlanMsg(
 			'Arrival',
@@ -106,6 +106,7 @@ client.on('message', message => {
 			utils.feetToMeters(destAirport.longest_runway_width),
 			utils.feetToMeters(destAirport.altitude),
 			destAirport.tower_frequency,
+			'',
 		);
 		message.channel.send(depMsg);
 		message.channel.send(arrMsg);

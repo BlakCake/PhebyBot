@@ -54,7 +54,7 @@ exports.INTRO = {
 };
 
 
-exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width, altitude, frequency) => {
+exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width, altitude, frequency, flightTime) => {
 	const msg = {
 		'embed': {
 			'title': `${name}`,
@@ -105,7 +105,7 @@ exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width
 		},
 	};
 	if (type.toLowerCase() === 'departure') {
-		msg.content = 'I have chosen this flight path for you, hope you like it 💗\nYou can always ask for another one if you want';
+		msg.content = `I have chosen this flight path for you, hope you like it 💗\nYou can always ask for another one if you want\nEstimated flight time: ${flightTime} hours`;
 	}
 	return msg;
 };
