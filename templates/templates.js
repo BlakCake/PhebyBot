@@ -93,12 +93,12 @@ exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width
 				},
 				{
 					'name': 'Altitude',
-					'value': `${altitude}`,
+					'value': `${altitude}m`,
 					'inline': true,
 				},
 				{
 					'name': 'Tower Frequency',
-					'value': `${frequency}Hz`,
+					'value': `${frequency}`,
 					'inline': true,
 				},
 			],
