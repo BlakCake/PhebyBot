@@ -116,7 +116,7 @@ exports.FlightPlan = (departAirportName, departLat, departLong, user, departIden
 			},
 
 			'author': {
-				'name': `${user}'s Flight Plan - Departure`,
+				'name': `${user}'s Flight Plan - Arrival`,
 				'icon_url': 'https://i.imgur.com/vCauxU7.png',
 			},
 			'fields': [
