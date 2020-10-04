@@ -8,6 +8,7 @@ Hi! My name is Pheby, nice to meet you 💗 I hope I can be useful for your Disc
 | Commands      | Desciption                              | Usage                       |
 | ------------- |:---------------------------------------:| ---------------------------:|
 | -pheby        | See my intro!                           | -pheby                      |
+| -flight       | Request a flight for MSFS2020           | -flight {aircraft} {minutes}|
 | -time         | Time conversion between countries       | -time {country} {HH:MM}     |
 | -time         | Show time in country                    | -time {country}             |
 | -thanks       | Say Thank you to Pheby!                 | -thanks                     |
