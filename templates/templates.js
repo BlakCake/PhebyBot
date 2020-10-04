@@ -53,12 +53,12 @@ exports.INTRO = {
 	},
 };
 
-exports.FlightPlan = (departAirportName, departLat, departLong, user, departIdent, departCity, departLength, departWidth, departAltitude, departFrequency, arrivalAirportName, arrivalLat, arrivalLong, arrivalIdent, arrivalCity, arrivalLength, arrivalWidth, arrivalAltitude, arrivalFrequency) => {
-	return {
-		'content': 'I have chosen this flight path for you, hope you like it 💗\nYou can always ask for another one if you want',
-		'embeds': [{
-			'title': `${departAirportName}`,
-			'description': `${departLat},${departLong}`,
+
+exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width, altitude, frequency) => {
+	const msg = {
+		'embed': {
+			'title': `${name}`,
+			'description': `${lat},${long}`,
 			'color': 13991080,
 			'footer': {
 				'text': 'Rating: ⭐⭐⭐',
@@ -66,91 +66,46 @@ exports.FlightPlan = (departAirportName, departLat, departLong, user, departIden
 			'thumbnail': {
 				'url': 'https://upload.wikimedia.org/wikipedia/en/6/68/Microsoft_Flight_Simulator_logo_%282020%29.png',
 			},
-
 			'author': {
-				'name': `${user}'s Flight Plan - Departure`,
+				'name': `${user}'s Flight Plan - ${type}`,
 				'icon_url': 'https://i.imgur.com/vCauxU7.png',
 			},
 			'fields': [
 				{
 					'name': 'Ident',
-					'value': `${departIdent}`,
+					'value': `${ident}`,
 					'inline': true,
 				},
 				{
 					'name': 'City',
-					'value': `${departCity}`,
+					'value': `${city}`,
 					'inline': true,
 				},
 				{
 					'name': 'Runway Length',
-					'value': `${departLength}m`,
+					'value': `${length}m`,
 					'inline': true,
 				},
 				{
 					'name': 'Runway Width',
-					'value': `${departWidth}m`,
+					'value': `${width}m`,
 					'inline': true,
 				},
 				{
 					'name': 'Altitude',
-					'value': `${departAltitude}`,
+					'value': `${altitude}`,
 					'inline': true,
 				},
 				{
 					'name': 'Tower Frequency',
-					'value': `${departFrequency}Hz`,
+					'value': `${frequency}Hz`,
 					'inline': true,
 				},
 			],
 		},
-		{
-			'title': `${arrivalAirportName}`,
-			'description': `${arrivalLat},${arrivalLong}`,
-			'color': 13991080,
-			'footer': {
-				'text': 'Rating: ⭐⭐⭐',
-			},
-			'thumbnail': {
-				'url': 'https://upload.wikimedia.org/wikipedia/en/6/68/Microsoft_Flight_Simulator_logo_%282020%29.png',
-			},
-
-			'author': {
-				'name': `${user}'s Flight Plan - Arrival`,
-				'icon_url': 'https://i.imgur.com/vCauxU7.png',
-			},
-			'fields': [
-				{
-					'name': 'Ident',
-					'value': `${arrivalIdent}`,
-					'inline': true,
-				},
-				{
-					'name': 'City',
-					'value': `${arrivalCity}`,
-					'inline': true,
-				},
-				{
-					'name': 'Runway Length',
-					'value': `${arrivalLength}m`,
-					'inline': true,
-				},
-				{
-					'name': 'Runway Width',
-					'value': `${arrivalWidth}m`,
-					'inline': true,
-				},
-				{
-					'name': 'Altitude',
-					'value': `${arrivalAltitude}`,
-					'inline': true,
-				},
-				{
-					'name': 'Tower Frequency',
-					'value': `${arrivalFrequency}Hz`,
-					'inline': true,
-				},
-			],
-		},
-		] };
+	};
+	if (type.toLowerCase() === 'departure') {
+		msg.content = 'I have chosen this flight path for you, hope you like it 💗\nYou can always ask for another one if you want';
+	}
+	return msg;
 };
