@@ -93,6 +93,7 @@ const flightHandler = (message, args, data_arr) => {
 	const requestedTime = parseInt(args[2]) / 60;
 	const randAirport = _.sample(data_arr);
 	let filteredAirports = [];
+
 	for (const airport of data_arr) {
 		const dist = geolib.getDistance(
 			{ latitude: randAirport.laty, longitude: randAirport.lonx },
@@ -104,8 +105,10 @@ const flightHandler = (message, args, data_arr) => {
 			filteredAirports.push(airport);
 		}
 	}
+
 	const destAirport = filteredAirports.pop();
 	filteredAirports = filteredAirports.sort(flightTimeCompare);
+
 	const depMsg = templates.FlightPlanMsg(
 		'Departure',
 		randAirport.name,
@@ -120,6 +123,7 @@ const flightHandler = (message, args, data_arr) => {
 		randAirport.tower_frequency,
 		destAirport.flight_time.toFixed(1),
 	);
+
 	const arrMsg = templates.FlightPlanMsg(
 		'Arrival',
 		destAirport.name,

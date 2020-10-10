@@ -20,11 +20,9 @@ fs.createReadStream('airports_msfs2020_pheby.csv')
 	.pipe(csv())
 	.on('data', function(data) {
 		try {
-			// perform the operation
 			data_arr.push(data);
 		}
 		catch(err) {
-			// error handler
 			console.log(err);
 		}
 	})
