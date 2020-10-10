@@ -2,3 +2,4 @@ node_modules/*
 *.ahk
 package-lock.json
 Start_PhebyBot.bat
+.env
