@@ -147,7 +147,6 @@ function numberToStar(starAmount) {
 	let Star = '';
 	if (starAmount == 0) {
 		Star = '💩';
-		console.log('bruh');
 	}
 	for(let i = 1; i <= starAmount; i++) {
 		Star += '⭐';
