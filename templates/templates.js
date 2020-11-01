@@ -54,14 +54,14 @@ exports.INTRO = {
 };
 
 
-exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width, altitude, frequency, flightTime) => {
+exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width, altitude, frequency, flightTime, star) => {
 	const msg = {
 		'embed': {
 			'title': `${name}`,
-			'description': `${lat},${long}`,
+			'description': `${lat}, ${long}`,
 			'color': 13991080,
 			'footer': {
-				'text': 'Rating: ⭐⭐⭐',
+				'text': `Rating: ${star}`,
 			},
 			'thumbnail': {
 				'url': 'https://upload.wikimedia.org/wikipedia/en/6/68/Microsoft_Flight_Simulator_logo_%282020%29.png',
@@ -105,7 +105,7 @@ exports.FlightPlanMsg = (type, name, lat, long, user, ident, city, length, width
 		},
 	};
 	if (type.toLowerCase() === 'departure') {
-		msg.content = `I have chosen this flight path for you, hope you like it 💗\nYou can always ask for another one if you want\nEstimated flight time: ${flightTime} hours`;
+		msg.content = `I have chosen this flight path for you, hope you like it 💗\nEstimated flight time: ${flightTime} hours\nYou can always ask for another one if you want`;
 	}
 	return msg;
 };

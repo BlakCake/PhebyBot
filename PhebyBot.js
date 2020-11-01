@@ -27,7 +27,7 @@ fs.createReadStream('airports_msfs2020_pheby.csv')
 		}
 	})
 	.on('end', function() {
-		console.log('done');
+		console.log('Loaded airports_msfs2020_pheby.csv');
 	});
 
 

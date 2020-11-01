@@ -122,6 +122,7 @@ const flightHandler = (message, args, data_arr) => {
 		feetToMeters(randAirport.altitude),
 		randAirport.tower_frequency,
 		destAirport.flight_time.toFixed(1),
+		numberToStar(randAirport.rating),
 	);
 
 	const arrMsg = templates.FlightPlanMsg(
@@ -137,9 +138,22 @@ const flightHandler = (message, args, data_arr) => {
 		feetToMeters(destAirport.altitude),
 		destAirport.tower_frequency,
 		'',
+		numberToStar(destAirport.rating),
 	);
 	return { depMsg, arrMsg };
 };
+
+function numberToStar(starAmount) {
+	let Star = '';
+	if (starAmount == 0) {
+		Star = '💩';
+		console.log('bruh');
+	}
+	for(let i = 1; i <= starAmount; i++) {
+		Star += '⭐';
+	}
+	return Star;
+}
 
 const flightTimeCompare = (a, b) => {
 	if (a.flight_time < b.flight_time) {
