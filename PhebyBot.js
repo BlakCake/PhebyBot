@@ -58,6 +58,10 @@ client.on('message', message => {
 		}
 
 		if (message.content.startsWith(`${PREFIX}flight`)) {
+			if (args.length == 1) {
+				message.channel.send('You can ask for a flight plan using -flight [aircraft] [flight time in minutes]\nConfused with the aircraft names? Use -aircraft');
+				return;
+			}
 			const msgs = utils.flightHandler(message, args, data_arr);
 			message.channel.send(msgs.depMsg);
 			message.channel.send(msgs.arrMsg);
