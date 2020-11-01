@@ -11,6 +11,14 @@ const ThankQuotes = require('./templates/ThankYouQuotes.js');
 const client = new Discord.Client();
 
 client.once('ready', () => {
+	client.user.setPresence({
+		status: 'online',
+		activity: {
+			name: 'with your feelings',
+			type: 'PLAYING',
+			// url: 'https://www.twitch.tv/monstercat',
+		},
+	});
 	console.log('Ready!');
 });
 
