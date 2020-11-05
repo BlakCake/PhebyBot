@@ -14,8 +14,8 @@ client.once('ready', () => {
 	client.user.setPresence({
 		status: 'online',
 		activity: {
-			name: 'with your feelings',
-			type: 'PLAYING',
+			name: 'my heart',
+			type: 'LISTENING',
 			// url: 'https://www.twitch.tv/monstercat',
 		},
 	});
