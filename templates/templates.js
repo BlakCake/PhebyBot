@@ -26,12 +26,12 @@ exports.INTRO = {
 			},
 			{
 				'name': 'Height',
-				'value': '170 cm',
+				'value': '172 cm',
 				'inline': true,
 			},
 			{
 				'name': 'Weight',
-				'value': '122 lb',
+				'value': '134 lb',
 				'inline': true,
 			},
 			{
